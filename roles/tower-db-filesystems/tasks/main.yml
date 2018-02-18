@@ -16,7 +16,7 @@
 
 - name: TOWER | filesystems | bail out if our target disk is not available
   fail:
-    msg: "Computer says NO! Cannot find target disk for satellite installation. Check yo 'pv_name' variable"
+    msg: "Computer says NO! Cannot find target disk for tower db installation. Check yo 'pv_name' variable"
   when: pv_name not in pv_list.stdout
   tags:
     - tower_filesystems
